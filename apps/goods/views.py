@@ -64,6 +64,7 @@ class IndexView(View):
 
         # # 使用模板
         # return render(request, 'index.html', context)
+        #
         return HttpResponse("index")
 
 # /goods/商品id
