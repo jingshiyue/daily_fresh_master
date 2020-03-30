@@ -1,0 +1,12 @@
+con = get_redis_connection('default')
+
+# 获取用户最新浏览的5个商品的id
+sku_ids = con.lrange(history_key, 0, 4)
+
+address = Address.objects.get_default_address(user) #model里定义了manager类
+
+ def get(self, request, token):  #通过url(r'^active/(?P<token>.*)$'直接得到
+ request.POST.get('user_name')
+
+django模式用数据库存储session，而session又经常使用到，项目中用redis存储session，安装django-redis-sessions包
+django-redis 另外一种session放redis
